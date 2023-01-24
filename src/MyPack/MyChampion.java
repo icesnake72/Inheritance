@@ -1,46 +1,60 @@
 package MyPack;
 
-public class MyCharacter {
+public class MyChampion {
+
+    class Location {
+        private int x;
+        private int y;
+        public Location(){
+            this.x = this.y = 0;
+        }
+        public Location(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    private Location loc = new Location();
+
     public static int lastId = 0;
     private int HP;
     private int AttackPower;
-    private int x;
-    private int y;
+
     private String name;
     private int id;
 
-    public MyCharacter() {
+    public MyChampion() {
         this.HP = 100;
         AttackPower = 10;
-        this.x = 0;
-        this.y = 0;
+        this.loc.x = 0;
+        this.loc.y = 0;
         this.name = "unknown";
         this.id = lastId++;
     }
 
-    public MyCharacter(int HP, int x, int y) {
+    public MyChampion(int HP, int x, int y) {
         this.HP = HP;
         AttackPower = 10;
-        this.x = x;
-        this.y = y;
+        this.loc.x = x;
+        this.loc.y = y;
         this.id = lastId++;
     }
 
-    public MyCharacter(int x, int y) {
+    public MyChampion(int x, int y) {
         this.name = "unknown";
         AttackPower = 10;
-        this.x = x;
-        this.y = y;
+        this.loc.x = x;
+        this.loc.y = y;
         this.HP = 100;
         this.id = lastId++;
     }
 
-    public MyCharacter(String name, int HP, int AttackPower) {
+    public MyChampion(String name, int HP, int AttackPower) {
         this.name = name;
         this.AttackPower = AttackPower;
         this.HP = HP;
-        this.x = 0;
-        this.y = 0;
+        this.loc.x = 0;
+        this.loc.y = 0;
         this.id = lastId++;
     }
 
@@ -54,18 +68,23 @@ public class MyCharacter {
     public void GetInfo() {
         System.out.println("Information of " + this);
         System.out.println("HP : " + HP);
-        System.out.println("X : " + x + " Y : " + y);
+        System.out.println("X : " + loc.x + " Y : " + loc.y);
     }
 
     public void Move(int x, int y) {
         System.out.println(this + " 이동...");
-        this.x = x;
-        this.y = y;
+        loc.x = x;
+        loc.y = y;
 
         GetInfo();
     }
 
-    public void Attack(MyCharacter enemy) {
+    public void Move(Location loc) {
+        this.loc.x = loc.x;
+        this.loc.y = loc.y;
+    }
+
+    public void Attack(MyChampion enemy) {
         if ( enemy!=null ) {
             System.out.println(this + "가 " + enemy + "를 공격합니다.");
             enemy.HP -= AttackPower;
@@ -75,19 +94,19 @@ public class MyCharacter {
     }
 }
 
-class Kaisa extends MyCharacter {
+class Kaisa extends MyChampion {
     public Kaisa() {
         super("카이사", 300, 10);
     }
 }
 
-class Zed extends MyCharacter {
+class Zed extends MyChampion {
     public Zed() {
         super("제드", 500, 20);
     }
 }
 
-class Lux extends MyCharacter {
+class Lux extends MyChampion {
     public Lux() {
         super("럭스", 300, 5);
     }
