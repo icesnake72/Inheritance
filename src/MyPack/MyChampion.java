@@ -85,7 +85,7 @@ public class MyChampion {
     }
 
     public void Move(Location location) {
-        loc.Copy(location);
+        this.Move(location.x, location.y);
     }
 
     public void Attack(MyChampion enemy) {
@@ -96,11 +96,22 @@ public class MyChampion {
             GetInfo();
         }
     }
+
+    public void SelfHeal(int weight) {
+        HP += weight;
+        System.out.println(this + "의 HP가 " + weight + "만큼 회복되어 " + HP + " 입니다");
+    }
 }
 
 class Kaisa extends MyChampion {
     public Kaisa() {
         super("카이사", 300, 10);
+    }
+
+    @Override
+    public void Attack(MyChampion enemy) {
+        super.Attack(enemy);
+        SelfHeal(2);
     }
 }
 
