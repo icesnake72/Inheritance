@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15aa1125-3fbe-4065-bbe1-d491e66724a9" name="변경" comment="내부 클래스 완성후 외부에서 사용하기">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="15aa1125-3fbe-4065-bbe1-d491e66724a9" name="변경" comment="오버라이딩 사용">
       <change beforePath="$PROJECT_DIR$/src/MyPack/MyChampion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyPack/MyChampion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyPack/MyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyPack/MyGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +88,20 @@
       <option name="project" value="LOCAL" />
       <updated>1674551892680</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="오버라이딩 사용">
+      <created>1674566597624</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674566597624</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="기본 기능 + 상속" />
     <MESSAGE value="내부 클래스 완성후 외부에서 사용하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="내부 클래스 완성후 외부에서 사용하기" />
+    <MESSAGE value="오버라이딩 사용" />
+    <option name="LAST_COMMIT_MESSAGE" value="오버라이딩 사용" />
   </component>
 </project>
