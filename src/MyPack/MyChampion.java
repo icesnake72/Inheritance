@@ -12,6 +12,11 @@ public class MyChampion {
             this.x = x;
             this.y = y;
         }
+
+        public void Copy(Location loc) {
+            this.x = loc.x;
+            this.y = loc.y;
+        }
     }
 
     private Location loc = new Location();
@@ -79,9 +84,8 @@ public class MyChampion {
         GetInfo();
     }
 
-    public void Move(Location loc) {
-        this.loc.x = loc.x;
-        this.loc.y = loc.y;
+    public void Move(Location location) {
+        loc.Copy(location);
     }
 
     public void Attack(MyChampion enemy) {
